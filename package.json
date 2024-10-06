@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.13.8",
+    "@libsql/client": "^0.14.0",
+    "@nuxt/eslint": "^0.5.7",
+    "@nuxt/fonts": "^0.9.2",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@primevue/themes": "^4.0.7",
+    "dayjs": "^1.11.13",
+    "drizzle-kit": "^0.24.2",
+    "drizzle-orm": "^0.33.0",
+    "elevenlabs": "^0.16.1",
+    "nuxt": "^3.13.0",
+    "pinata": "^1.5.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.7",
+    "tailwindcss-primeui": "^0.3.4",
+    "uuid": "^10.0.0",
+    "vue": "latest",
+    "vue-clerk": "^0.6.17",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.0.7",
+    "@types/uuid": "^10.0.0",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
+    "autoprefixer": "^10.4.20",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
+  }
+}

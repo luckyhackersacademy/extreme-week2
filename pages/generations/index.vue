@@ -1,10 +1,19 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'admin',
+  middleware: ['auth'],
 });
 
-const isEmpty = ref<boolean>(true);
-const loading = ref<boolean>(false);
+const { loading, generations, isEmpty } = useGenerations();
+const { loadings, download, fetchAudioSignedUrl } = useAudioSignedUrl();
+
+const handleDownload = async ({
+  title,
+  audioId,
+}: Pick<Generation, 'title' | 'audioId'>) => {
+  await fetchAudioSignedUrl(audioId);
+  download(title);
+};
 </script>
 
 <template>
@@ -35,16 +44,17 @@ const loading = ref<boolean>(false);
       class="w-full max-w-4xl flex flex-col gap-2"
     >
       <p class="text-base text-gray-700">
-        3 áudios encontrados.
+        {{ generations.length }} áudios encontrados.
       </p>
       <Generation
-        v-for="n in 3"
-        :key="n"
-        title="Lorem ipsum title"
-        content="Lorem ipsum content"
-        audio-id="audioId"
-        date="2024-10-06T13:27:06.865Z"
-        :is-downloading="false"
+        v-for="generation in generations"
+        :key="generation.id"
+        :title="generation.title"
+        :content="generation.content"
+        :audio-id="generation.audioId"
+        :date="generation.createdAt"
+        :is-downloading="loadings[generation.audioId]"
+        @download="handleDownload"
       />
     </div>
   </div>

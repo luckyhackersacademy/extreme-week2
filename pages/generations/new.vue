@@ -1,14 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'admin',
+  middleware: ['auth'],
 });
-
-const title = ref<string>('');
-const content = ref<string>('');
-const loading = ref<boolean>(false);
 
 const router = useRouter();
 
+const { title, content, loading, create } = useGenerationCreate();
 const placeholder = `Aqui vou deixar um exemplo:
 
 Olha a promoção minha gente! Red bull latinha apenas 7 e 99, picanha o kilo apenas 57 e 99
@@ -17,7 +15,7 @@ Olha a promoção minha gente! Red bull latinha apenas 7 e 99, picanha o kilo ap
 const isDisabled = computed(() => !title.value || !content.value);
 
 const handleCreate = async () => {
-  // TODO: create generation
+  await create();
   router.push('/generations');
 };
 </script>

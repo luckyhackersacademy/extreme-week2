@@ -1,6 +1,6 @@
-# `Extreme Week 2`
+# `Extreme Week 2 - Boilerplate`
 
-Projeto para a Extreme Week 2!
+Boilerplate para a Extreme Week 2!
 
 ## Tech Stack
 

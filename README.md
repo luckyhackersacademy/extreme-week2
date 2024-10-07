@@ -1,6 +1,21 @@
-# `Extreme Week 2 - Boilerplate`
+# `Extreme Week 2`
 
-Boilerplate para a Extreme Week 2!
+Projeto final para a Extreme Week 2!
+
+## Usando o boilerplate
+
+👉🏻 [Boiplate nessa branch](https://github.com/luckyhackersacademy/extreme-week2/tree/boilerplate)
+
+```
+# clone o repo
+git clone https://github.com/luckyhackersacademy/extreme-week2.git
+
+# entre na pasta
+cd extreme-week2
+
+# troque para a branch do boilerplate
+git checkout boilerplate
+```
 
 ## Tech Stack
 
